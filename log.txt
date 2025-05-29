@@ -1,0 +1,97 @@
+2025-05-28 21:27:55 UTC
+Linux-6.8.0-59-generic-x86_64-with-glibc2.35
+Ren'Py 8.3.6.25022803
+
+Early init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/home/zloysnegovik/.renpy/backups/TrueDragon':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.32s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'AMD'"
+Renderer: b'RENOIR (renoir, LLVM 15.0.7, DRM 3.57, 6.8.0-59-generic)'
+Version: b'4.6 (Compatibility Profile) Mesa 23.2.1-1ubuntu3.1~22.04.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 20, in script
+    d "True Dragon!"
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/ast.py", line 2586, in execute
+    Say.execute(self)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/exports/sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/character.py", line 1470, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/character.py", line 1117, in do_display
+    display_say(who,
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/character.py", line 814, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/core.py", line 3289, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/screen.py", line 794, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/behavior.py", line 1182, in event
+    return handle_click(self.clicked)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/behavior.py", line 1103, in handle_click
+    rv = run(action)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/behavior.py", line 401, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_control.rpy", line 131, in __call__
+    renpy.show_screen(self.screen, *self.args, **self.kwargs)
+  File "/home/zloysnegovik/files/renpy/renpy-8.3.6-sdk/renpy/display/screen.py", line 1328, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen global_map is not known.
+
+
+While running game code:
+  File "game/script.rpy", line 20, in script
+    d "True Dragon!"
+  File "renpy/common/00action_control.rpy", line 131, in __call__
+    renpy.show_screen(self.screen, *self.args, **self.kwargs)
+Exception: Screen global_map is not known.
+
